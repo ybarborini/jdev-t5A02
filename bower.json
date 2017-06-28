@@ -1,0 +1,24 @@
+{
+  "name": "jdev-api-hal",
+  "version": "0.0.1",
+  "authors": [
+    "barborini <yannick.barborini@ccsd.cnrs.fr>"
+  ],
+  "description": "Atelier T5.A02",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
+    "chart.js": "latest",
+    "wordcloud2.js": "latest"
+  }
+}
