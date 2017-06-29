@@ -8,18 +8,15 @@
 
 class Result
 {
-    protected $_solrReturn = '';
+    protected $_solrDocuments = '';
+
+    protected $_solrFacet = '';
 
 
     public function __construct($solrReturn)
     {
-        $this->_solrReturn = $solrReturn;
-        var_dump($solrReturn);
-    }
-
-    public function get()
-    {
-        return $this->_solrReturn;
+        $this->_solrDocuments = $solrReturn->response;
+        $this->_solrFacet = $solrReturn->facet_counts;
     }
 
     public function getNbResult()
@@ -32,10 +29,17 @@ class Result
         return $this->getAttribut('docs');
     }
 
+    public function getFacet($facet)
+    {
+        if (isset($this->_solrFacet->facet_fields->{$facet})) {
+            return $this->_solrFacet->facet_fields->{$facet};
+        }
+    }
+
     protected function getAttribut($name)
     {
-        if (isset($this->_solrReturn->{$name})) {
-            return $this->_solrReturn->{$name};
+        if (isset($this->_solrDocuments->{$name})) {
+            return $this->_solrDocuments->{$name};
         }
         return null;
     }

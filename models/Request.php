@@ -10,18 +10,9 @@ class Request
 {
     protected $_endpoint = null;
 
-    protected $_fq = null;
-
-
-    public function __construct($options)
+    public function __construct($endpoint)
     {
-        if (isset($options->endpoint)) {
-            $this->_endpoint = $options->endpoint;
-        }
-
-        if (isset($options->set)) {
-            $this->_fq = $options->set;
-        }
+        $this->_endpoint = $endpoint;
     }
 
     /**
@@ -30,10 +21,12 @@ class Request
      */
     public function getDocument($halId)
     {
-        $result = file_get_contents($this->_endpoint . 'q=*%3A*&fq=halId_s:' . $halId . '&fl=*&rows=1&wt=json&indent=true');
+        $result = file_get_contents($this->_endpoint . 'q=*:*&fq=halId_s:' . $halId . '&fl=*&rows=1&wt=json&indent=true');
         if ($result) {
             $result = json_decode($result);
-            return new Document($result->response->docs[0]);
+            if (isset($result->response->docs[0])) {
+                return new Document($result->response->docs[0]);
+            }
         }
         return null;
     }
@@ -42,15 +35,25 @@ class Request
      * @param $q
      * @return null|Result
      */
-    public function search($q)
+    public function search($q, $fq = [] )
     {
-        $result = file_get_contents($this->_endpoint . 'q=' . $q . '%3A*&&rows=50&wt=json&indent=true');
+        $request = $this->_endpoint;
+        $request .= 'q=' . urlencode($q) . '&';
+        if ($fq) {
+            foreach ($fq as $filter) {
+                $request .= 'fq=' . urlencode($filter) . '&';
+            }
+        }
+        $request .= 'rows=20&';
+        $request .= 'fl=halId_s,uri_s,submitType_s,label_s,docType_s&';
+        $request .= 'facet=true&facet.field=docType_s&facet.field=primaryDomain_s&facet.field=authFullName_s&facet.mincount=1&json.nl=map&facet.limit=10';
+
+        $result = file_get_contents( $request );
         if ($result) {
             $result = json_decode($result);
-            return new Result($result->response);
+            return new Result($result);
         }
         return null;
     }
-
 
 }

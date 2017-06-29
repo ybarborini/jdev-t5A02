@@ -23,6 +23,12 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="index.php">Collection HAL</a>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" name="q">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
 </nav>
 
 <!-- display view -->

@@ -9,3 +9,18 @@ body {
 .text-grey {
     color: #999;
 }
+.badge {
+    font-weight: normal;
+}
+.badge-ART {
+    background: #d9534f;
+}
+.badge-COMM {
+    background: #f0ad4e;
+}
+.badge-THESE {
+    background: #5CB85C;
+}
+.badge-COUV, .badge-DOUV {
+    background: #5bc0de;
+}

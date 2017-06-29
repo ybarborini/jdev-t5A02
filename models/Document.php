@@ -103,6 +103,7 @@ class Document
 
     public function getRevue()
     {
+
         $revue = $this->getAttribut('journalTitle_s');
         if ($issn = $this->getAttribut('journalIssn_s')) {
             $revue .= '(ISSN: ' . $issn . ') ';
@@ -116,7 +117,21 @@ class Document
         return $revue;
     }
 
+    public function getConference()
+    {
 
+        $conf = $this->getAttribut('conferenceTitle_s');
+        if ($start = $this->getAttribut('conferenceStartDateY_i')) {
+            $conf .= ' - ' . $start;
+        }
+        $conf .= '. ';
+        if ($city = $this->getAttribut('city_s')) {
+            $conf .= $city . ', ';
+        }
+        $conf .= $this->getAttribut('country_s');
+
+        return $conf;
+    }
 
 
     protected function getAttribut($name)
