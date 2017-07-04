@@ -1,6 +1,6 @@
 <div class="container">
     <div class="card">
-        Affichage du document <?php echo $halId?>
+        Affichage du document <?php echo $halid?>
     </div>
 
 
