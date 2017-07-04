@@ -6,7 +6,8 @@ foreach (scandir(__DIR__ . DIRECTORY_SEPARATOR . 'models') as $file) {
     }
 }
 
-$request = new Request('https://api.archives-ouvertes.fr/search/hal/?');
+$request = new Request('https://api.archives-ouvertes.fr/search/hal?');
+
 
 if (isset($_GET['halid'])) {
     $halid = $_GET['halid'];

@@ -8,6 +8,9 @@
  */
 class Request
 {
+    /**
+     * @var string API endpoint
+     */
     protected $_endpoint = null;
 
     public function __construct($endpoint)

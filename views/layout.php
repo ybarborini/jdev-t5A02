@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Collection HAL</title>
+    <title>API HAL</title>
 
     <!-- Bootstrap core CSS -->
     <link href="libraries/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
@@ -25,7 +24,7 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="index.php">Collection HAL</a>
+    <a class="navbar-brand" href="index.php">HAL</a>
     <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" name="q">

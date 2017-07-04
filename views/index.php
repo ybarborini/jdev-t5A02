@@ -4,7 +4,7 @@
 <div class="container-fluid">
 
     <div class="starter-template">
-        <h1 class="text-white">Collection HAL</h1>
+        <h1 class="text-white">JDEV - HAL</h1>
         <p class="lead text-grey">Usage des API de HAL</p>
     </div>
 
