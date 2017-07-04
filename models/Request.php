@@ -8,20 +8,14 @@
  */
 class Request
 {
+    /**
+     * @var string API endpoint
+     */
     protected $_endpoint = null;
 
-    protected $_fq = null;
-
-
-    public function __construct($options)
+    public function __construct($endpoint)
     {
-        if (isset($options->endpoint)) {
-            $this->_endpoint = $options->endpoint;
-        }
-
-        if (isset($options->set)) {
-            $this->_fq = $options->set;
-        }
+        $this->_endpoint = $endpoint;
     }
 
     /**
@@ -37,20 +31,5 @@ class Request
         }
         return null;
     }
-
-    /**
-     * @param $q
-     * @return null|Result
-     */
-    public function search($q)
-    {
-        $result = file_get_contents($this->_endpoint . 'q=' . $q . '%3A*&&rows=50&wt=json&indent=true');
-        if ($result) {
-            $result = json_decode($result);
-            return new Result($result->response);
-        }
-        return null;
-    }
-
 
 }
