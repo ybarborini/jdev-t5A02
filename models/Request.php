@@ -56,4 +56,19 @@ class Request
         return null;
     }
 
+    public function facet()
+    {
+        $request = $this->_endpoint;
+        $request .= 'q=*:*&';
+        $request .= 'sort=submittedDate_tdate+desc&rows=6&fl=halId_s,citationRef_s,docType_s,thumbId_i&';
+        $request .= 'facet=true&facet.field=keyword_s&facet.field=docType_s&facet.field=country_s&facet.field=submitType_s&json.nl=map&facet.limit=100&facet.mincount=1';
+
+        $result = file_get_contents( $request );
+        if ($result) {
+            $result = json_decode($result);
+            return new Result($result);
+        }
+        return null;
+    }
+
 }

@@ -19,6 +19,7 @@ if (isset($_GET['halid'])) {
     $result = $request->search($q, $fq);
     $view = 'search.php';
 } else {
+    $result = $request->facet();
     $view = 'index.php';
 }
 

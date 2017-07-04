@@ -14,6 +14,9 @@
     <!-- Custom styles for this template -->
     <link href="views/style.css" rel="stylesheet">
     <script src="libraries/jquery/dist/jquery.js"></script>
+    <script src="libraries/wordcloud2.js/src/wordcloud2.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 </head>
 
 <body>
