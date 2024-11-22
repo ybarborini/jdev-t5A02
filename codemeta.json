@@ -2,7 +2,7 @@
     "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
     "type": "SoftwareSourceCode",
     "codeRepository": "https://github.com/ybarborini/jdev-t5A02/",
-    "contributor": [
+    "author": [
         {
             "id": "https://orcid.org/0000-0003-3756-8647",
             "type": "Person",
@@ -15,11 +15,7 @@
             "givenName": "Yannick"
         },
         {
-            "type": "schema:Role",
-            "contributor": "https://orcid.org/0000-0003-3756-8647"
-        },
-        {
-            "id": "_:contributor_2",
+            "id": "https://orcid.org/0000-0003-2955-5678",
             "type": "Person",
             "email": "bruno.marmol@inria.fr",
             "familyName": "Marmol",
