@@ -1,0 +1,54 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "type": "SoftwareSourceCode",
+    "codeRepository": "https://github.com/ybarborini/jdev-t5A02/",
+    "contributor": [
+        {
+            "id": "https://orcid.org/0000-0003-3756-8647",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "CCSD, UAR3668 CNRS"
+            },
+            "email": "yannick.barborini@ccsd.cnrs.fr",
+            "familyName": "Barborini",
+            "givenName": "Yannick"
+        },
+        {
+            "type": "schema:Role",
+            "contributor": "https://orcid.org/0000-0003-3756-8647"
+        },
+        {
+            "id": "_:contributor_2",
+            "type": "Person",
+            "email": "bruno.marmol@inria.fr",
+            "familyName": "Marmol",
+            "givenName": "Bruno"
+        }
+    ],
+    "dateCreated": "2024-01-01",
+    "dateModified": "2024-01-01",
+    "description": "The HAL Client is a robust and intuitive application designed to seamlessly interface with the HAL API, enabling efficient management, retrieval, and submission of data. Tailored for researchers, librarians, and institutional administrators, the software simplifies workflows by providing streamlined access to HAL’s extensive functionalities.",
+    "funder": {
+        "type": "Organization",
+        "name": "ANR"
+    },
+    "keywords": [
+        "HAL",
+        "API",
+        "Open Access",
+        "Repository",
+        "Metadata Management",
+        "Research",
+        "Publications"
+    ],
+    "license": "https://spdx.org/licenses/GPL-3.0+",
+    "name": "HAL API client",
+    "operatingSystem": "Linux",
+    "programmingLanguage": [
+        "PHP",
+        "JS"
+    ],
+    "version": "1.0.0",
+    "funding": "ANR-21-ESRE-0047"
+}
