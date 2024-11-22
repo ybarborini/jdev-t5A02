@@ -15,15 +15,14 @@
             "givenName": "Yannick"
         },
         {
-            "id": "https://orcid.org/0000-0003-2955-5678",
             "type": "Person",
-            "email": "bruno.marmol@inria.fr",
             "familyName": "Marmol",
             "givenName": "Bruno"
         }
     ],
     "dateCreated": "2024-01-01",
-    "dateModified": "2024-01-01",
+    "dateModified": "2024-10-10",
+    "name": "HAL API client",
     "description": "The HAL Client is a robust and intuitive application designed to seamlessly interface with the HAL API, enabling efficient management, retrieval, and submission of data. Tailored for researchers, librarians, and institutional administrators, the software simplifies workflows by providing streamlined access to HAL’s extensive functionalities.",
     "funder": {
         "type": "Organization",
@@ -39,8 +38,9 @@
         "Publications"
     ],
     "license": "https://spdx.org/licenses/GPL-3.0+",
-    "name": "HAL API client",
     "operatingSystem": "Linux",
+    "developmentStatus": "concept",
+    "runtimePlatform": "Docker",
     "programmingLanguage": [
         "PHP",
         "JS"
